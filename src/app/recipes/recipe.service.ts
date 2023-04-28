@@ -5,10 +5,10 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable()
 export class RecipeService {
-  recipeSelected = new EventEmitter<Recipe>();
 
   private recipes: Recipe[] = [
     new Recipe(
+      1,
       'A test Recipe',
       'a test',
       'https://www.foodandwine.com/thmb/97PY4E6Wk95IYv1_8pDZvBEi0Uw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cream-tomato-rigatoni-FT-RECIPE1020-139fb3fa52574e8bb06f98e7fa3e4f1e.jpg',
@@ -18,6 +18,7 @@ export class RecipeService {
       ]
     ),
     new Recipe(
+      2,
       'A New Recipe',
       'new test',
       'https://www.inspiredtaste.net/wp-content/uploads/2022/11/Fluffy-Pancakes-Recipe-Video.jpg',
@@ -36,6 +37,10 @@ export class RecipeService {
 
   addIngredientsToShoppingList(ingredients: Ingredient[]){
     this.shoppingListService.addIngredients(ingredients);
+  }
+
+  getRecipe(id: number){
+    return this.recipes.slice().find(recipe => recipe.id == id);
   }
 
 }
