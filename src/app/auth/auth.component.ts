@@ -23,6 +23,10 @@ export class AuthComponent implements OnInit {
     this.isLoginMode = !this.isLoginMode;
   }
 
+  onHandleError(){
+    this.error = null;
+  }
+
   onSubmit(form: NgForm){
     const { email, password } = form.value;
     this.isLoading = true;
