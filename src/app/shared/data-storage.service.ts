@@ -9,7 +9,7 @@ import { AuthService } from '../auth/auth.service';
   providedIn: 'root'
 })
 export class DataStorageService {
-  url = 'https://ng-recipes-51a48-default-rtdb.firebaseio.com/recipes.json';
+  url = 'https://ng-recipes-59743-default-rtdb.firebaseio.com/recipes.json';
 
   constructor(private http: HttpClient,
     private recipeService: RecipeService,

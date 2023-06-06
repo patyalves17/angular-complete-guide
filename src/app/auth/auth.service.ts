@@ -22,8 +22,7 @@ export class AuthService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  API_KEY = 'AIzaSyCNJMp_ohqP0WQ_z3mGW1UcSMIL3JiE6r4';
-  // API_KEY = '';
+  API_KEY = '';
 
   url = 'https://identitytoolkit.googleapis.com/v1/accounts:'
 
